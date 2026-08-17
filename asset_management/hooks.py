@@ -5,6 +5,12 @@ app_description = "A company has hundreds of laptops, printers, monitors, and se
 app_email = "mohanappriyakarunakaran@mail.com"
 app_license = "mit"
 
+
+scheduler_events={
+    "daily": [
+        "asset_management.task.daily_maintanance"
+    ]
+}
 # Apps
 # ------------------
 
