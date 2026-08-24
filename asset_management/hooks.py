@@ -262,3 +262,10 @@ scheduler_events={
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+
+doc_events = {
+    "Test Document": {
+        "validate": "your_app.api.custom_logic"
+    }
+}

@@ -2,34 +2,48 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "naming_series: description",
- "creation": "2026-08-12 12:37:25.933966",
+ "autoname": "field:project_name",
+ "creation": "2026-08-21 10:58:35.332276",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "description",
-  "naming_series"
+  "project_name",
+  "customer",
+  "start_date",
+  "tasks"
  ],
  "fields": [
   {
-   "fieldname": "description",
+   "fieldname": "project_name",
    "fieldtype": "Data",
-   "label": "Description"
+   "label": "Project Name",
+   "unique": 1
   },
   {
-   "fieldname": "naming_series",
+   "fieldname": "customer",
    "fieldtype": "Data",
-   "label": "naming series"
+   "label": "Customer"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "Tasks",
+   "options": "Task"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-20 16:46:28.505066",
+ "modified": "2026-08-21 11:03:01.989678",
  "modified_by": "Administrator",
  "module": "Asset Management",
- "name": "Test Document",
- "naming_rule": "By \"Naming Series\" field",
+ "name": "Customer Project",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
