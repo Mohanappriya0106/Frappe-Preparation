@@ -2,45 +2,43 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "CT-.###",
- "creation": "2026-08-26 12:24:11.547013",
+ "autoname": "TD-.###",
+ "creation": "2026-08-27 11:31:45.814660",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "customer_name",
-  "status",
-  "email"
+  "user",
+  "work",
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "customer_name",
-   "fieldtype": "Data",
+   "fieldname": "user",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Customer Name",
+   "label": "User",
+   "options": "Customer",
    "reqd": 1
+  },
+  {
+   "fieldname": "work",
+   "fieldtype": "Data",
+   "label": "work"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "Active\nInactive",
-   "reqd": 1
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email",
-   "options": "Email"
+   "label": "status",
+   "options": "IN progress\nCompleted"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-27 11:31:21.219529",
+ "modified": "2026-08-27 11:33:43.690701",
  "modified_by": "Administrator",
  "module": "Asset Management",
- "name": "Customer",
+ "name": "To Do",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
