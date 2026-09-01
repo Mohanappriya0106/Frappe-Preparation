@@ -20,25 +20,18 @@ def api_practice():
 @frappe.whitelist()
 def get_recent_todos():
 
-    customers = frappe.get_list(
-        "To Do",
-        order_by="creation desc",
-        limit_page_length=5
-    )
+    todos=frappe.get_list("To Do",fields=["name", "user"], order_by="creation desc" , limit_page_length=2)
 
-    for customer  in customers:
-        customer["owner_email"] = frappe.db.get_value(
-            "Customer",
-            customers.name,
-            "email"
-        )
+    for todo in todos:
+        todo["email"]=frappe.db.get_value("Customer", todo.user , "email")
+
 
 
     timestamp = frappe.utils.now()
 
     return {
         "timestamp": timestamp,
-        "records": customers
+        "records": todos
     }
 
 
@@ -50,3 +43,12 @@ def func(subject):
     new_doc.save()
     return new_doc.name
 
+
+# @frappe.whitelist()
+# def practice1():
+#     todos=frappe.get_list("To Do",fields=["name", "user"], order_by="creation desc" , limit_page_length=2)
+
+#     for todo in todos:
+#         todo["email"]=frappe.db.get_value("Customer", todo.user , "email")
+
+#     return todos

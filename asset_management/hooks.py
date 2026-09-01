@@ -266,6 +266,6 @@ scheduler_events={
 
 doc_events = {
     "Test Document": {
-        "validate": "asset_management.api.custom_logic"
+        "validate": "asset_management.asset_management.api.custom_logic.custom_logic"
     }
 }
