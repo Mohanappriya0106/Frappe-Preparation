@@ -40,3 +40,13 @@ def get_recent_todos():
         "timestamp": timestamp,
         "records": customers
     }
+
+
+@frappe.whitelist()
+
+def func(subject):
+    new_doc=frappe.new_doc("Task-API")
+    new_doc.subject=subject
+    new_doc.save()
+    return new_doc.name
+
